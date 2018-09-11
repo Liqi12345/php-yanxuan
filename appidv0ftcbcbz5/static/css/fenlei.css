@@ -1,0 +1,139 @@
+@import url('base.css');
+
+.top{
+    width: 100%;
+    height: 0.86rem;
+    padding-top: 0.2rem;
+    border-bottom: 1px solid #d6d6d6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: #fff;
+}
+
+.input1{
+    width: 5rem;
+    height: 0.65rem;
+    background: #efefef;
+    border-radius: 5px;
+    font-size: 0.26rem;
+    background-image: url('/qugou/static/images/Screenshot_2017-10-10-23-11-18-728_com.netease_03.png');
+    background-repeat:no-repeat;
+    background-position:0.6rem 0.1rem;
+    background-size:0.42rem 0.42rem;
+    padding-left: 1.1rem;
+    outline:none;
+    margin:0 auto;
+}
+/* 左侧 */
+.left {
+    width: 1.7rem;
+
+    background:#fff;
+    float: left;
+    overflow: hidden;
+  
+    margin-top: 1.06rem;
+     height: 12.7rem;
+    top:0.36rem;
+    left:0;
+    overflow: auto;
+    z-index: 500;
+}
+.left a {
+    display: block;
+    margin-top: 0.4rem;
+    width: 100%;
+    height: 0.7rem;
+    font-size: 0.28rem;
+    line-height: 0.5rem;
+    text-align: center;
+    color: #363636;
+    box-sizing: border-box;
+
+}
+
+.left a:hover {
+    color: #B4292F;
+    border-left: 0.09rem solid #B4292F;
+}
+.right{
+    display: none;
+    bottom:1.05rem;
+    width: 5.7rem;
+    background-color: #fff;
+    float: left;
+    border-left: 1px solid #d6d6d6;
+    overflow: hidden;
+    box-sizing: border-box;
+    position:absolute;
+    right: 0;
+    height: 12.7rem;
+    top: 1.42rem;
+}
+.hot{
+    display: block;
+}
+
+.banner { 
+    margin: 0.46rem 0.46rem 0;
+    width: 5rem;
+    height: 2rem;
+}
+
+.banner img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.bantwz {
+    width: 5rem;
+
+    margin: 0 0.25rem;
+    font-size: 0.36rem;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.6rem;
+    color: #363636;
+}
+
+.pirwz {
+    width: 5.35rem;
+    padding: 0 0 0 0.15rem;
+
+    overflow: hidden;
+}
+.pirwz a{
+	display: block;
+	width: 33%;
+    height: 2rem;
+    float: left;
+}
+.pirwzbox {
+    float: left;
+    width:100%;
+    height: 2rem;
+}
+
+.boximg1 {
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.boximg1 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.boxwz1 {
+    width: 100%;
+    text-align: center;
+    font-size: 0.27rem;
+    color: #363636;
+}
+
+

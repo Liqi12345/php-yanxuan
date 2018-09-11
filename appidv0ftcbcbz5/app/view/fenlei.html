@@ -1,0 +1,45 @@
+{include file='view/header.html'}
+<link rel="stylesheet" href="{CSS_PATH}fenlei.css">
+
+<script src="{JS_PATH}fenlei.js"></script>
+<div class="top">
+    <input class="input1" type="text"  placeholder="搜索商品,共9001款好物">
+
+</div>
+<!-- 左侧开始 -->
+<div class="left">
+    {foreach $data as $v}
+    <a class="a" href="#">{$v['cname']}</a>
+    {/foreach}
+</div>
+<!-- 右侧大盒子 -->
+{for $i=0 to $num}
+
+    <div class="right ">
+        <!-- 图片 -->
+        <section class="banner">
+            <a href=""><img src="{IMG_PATH}fenlei.png" alt=""></a>
+        </section>
+        <!-- 文字 -->
+        <div class="bantwz">
+            <span>——</span>&nbsp;&nbsp;&nbsp;{$data[$i]['cname']}分类&nbsp;&nbsp;&nbsp;<span>——</span>
+        </div>
+        <!-- 图片文字 -->
+        <div class="pirwz">
+            {foreach $arr[$i] as $v}
+
+            <a href="/index.php/lists?cid={$v['cid']}">
+                <div class="pirwzbox">
+                    <div class="boximg1">
+                        <img src="{$v['cthumb']}" alt="">
+                    </div>
+                    <div class="boxwz1">{$v['cname']}</div>
+                </div>
+            </a>
+            {/foreach}
+        </div>
+    </div>
+{/for}
+
+
+{include file='view/footer.html'};

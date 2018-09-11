@@ -1,0 +1,218 @@
+{include file='view/header.html'}
+<link rel="stylesheet" href="{CSS_PATH}index.css">
+<script src="{JS_PATH}index.js"></script>
+<link rel="stylesheet" href="{CSS_PATH}swiper.min.css">
+<script src="{JS_PATH}swiper.min.js"></script>
+<script>
+    $(function() {
+        var swiper = new Swiper('.tj-nav1 .swiper-container', {
+            slidesPerView:4,
+        });
+        var swiper = new Swiper('.sf .swiper-container', {
+            slidesPerView: 2.4,
+
+        });
+    })
+</script>
+<!-- 推荐顶栏开始 -->
+<div class="shouye">
+    <a href="" class="shao">扫一扫</a>
+    <input class="input1" type="text" placeholder="搜索商品,共10842款好物">
+    <a href="" class="xiaoxi">消 息</a>
+</div>
+<!-- 推荐顶栏结束 -->
+<!-- 推荐nav开始 -->
+<div class="tj-nav1">
+<div class="tj-nav swiper-container " style="padding-left:0.3rem;position:fixed;z-index: 500">
+
+    <ul class="swiper-wrapper">
+
+        {foreach $arr as $v}
+        <li class="swiper-slide">
+            <a href="/index.php/lists?cid={$v['cid']}">{$v['cname']}</a>
+        </li>
+        {/foreach}
+
+    </ul>
+</div>
+</div>
+<!-- 推荐nav结束 -->
+<!-- banna开始 -->
+<div class="banna">
+    <div class="img-box">
+        {foreach $banner as $v}
+        <a href="/index.php/details?pid=7">
+            <img src="{$v['cthumb']}" alt="">
+        </a>
+        {/foreach}
+
+    </div>
+    <ul class="dian">
+        <li class="hots"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<!-- banne结束 -->
+<!-- 网易自营品牌开始 -->
+<div class="wy">
+    <div class="wy1">
+
+        {foreach array_slice($res,0,3) as $v}
+        <a href="">
+            <img src="{$v['cthumb']}" alt="">{$v['cname']}
+        </a>
+        {/foreach}
+
+    </div>
+    <div class="wy2">
+        <div class="wy2-1">
+            {foreach array_slice($res,3,5) as $v}
+            <a href="">
+                <img src="{$v['cthumb']}" alt="">{$v['cname']}
+            </a>
+            {/foreach}
+
+        </div>
+    </div>
+</div>
+<!-- 网易自营品牌结束 -->
+<!-- 品牌开始 -->
+<div class="ppai">
+    <h2 class="ppai-top">{$cname3}<i class="iconfont icon-gengduo"></i></h2>
+    <div class="fl1 fl2">
+        {foreach $re4 as $v}
+        <a href="" class=" ff1 ff2" style="background:#f4f4f4;position: relative;">
+            <span class="span">{$v['label']}</span>
+            <img src="{$v['lthumb']}" alt="" style="position: absolute; width: 2.37rem;right:0;top:0">
+            <br><div class="f-zi" style="width: 2.5rem;">{$v['price']}</div>
+            <br><span>{$v['ldesc']}</span>
+        </a>
+        {/foreach}
+    </div>
+</div>
+<!-- 品牌结束 -->
+<!-- 新品首发开始 -->
+<div class="sf">
+    <h2 class="ppai-top shoufa-top">{$cname}
+        <i class="iconfont icon-gengduo"></i>
+    </h2>
+    <div class="sf-bottom swiper-container" >
+        <div class="sf-b-top swiper-wrapper" >
+            {foreach $re as $v}
+            <a class="swiper-slide" href="/index.php/details?pid={$v['cid']}">
+            <div class="navbox">
+                <div class="navboximg box2">
+                    <img src="{$v['lthumb']}" alt="">
+                </div>
+                <div class="imgbottom imgbottom1">
+                    {$v['price']}
+                </div>
+                <div class="navboxbottom">
+                    {$v['ldesc']}
+                    <p>{$v['label']}</p>
+                </div>
+            </div>
+        </a>
+
+            {/foreach}
+        </div>
+    </div>
+</div>
+
+<!-- 新品首发结束 -->
+<!-- 饭量团开始 -->
+<div class="fl">
+    <h2 class="ppai-top shoufa-top ztzt">{$cname1}&nbsp;
+        <i class="iconfont icon-gengduo"></i></h2>
+    <div class="fl1 ">
+        {foreach $re1 as $v}
+        <a href="" class=" ff1">
+            <span class="span">{$v['label']}</span>
+            <img src="{$v['lthumb']}" alt="">
+            <div class="f-zi">{$v['price']}</div>
+            <br><span>{$v['ldesc']}</span>
+        </a>
+        {/foreach}
+    </div>
+</div>
+<!-- 饭量团结束 -->
+<!-- 限时购开始 -->
+<div class="sf ">
+    <h2 class="ppai-top shoufa-top">{foreach array_slice($res,10,1) as $v}{$v['cname']}{/foreach}
+        <i class="iconfont icon-gengduo"></i>
+    </h2>
+    <div class="sf-bottom swiper-container" >
+        <div class="sf-b-top swiper-wrapper" >
+            {foreach $re as $v}
+            <a class="swiper-slide" href="/index.php/details?pid={$v['cid']}">
+                <div class="navbox">
+                    <div class="navboximg box2">
+                        <img src="{$v['lthumb']}" alt="">
+                    </div>
+                    <div class="imgbottom imgbottom1">
+                        {$v['price']}
+                    </div>
+                    <div class="navboxbottom">
+                        {$v['ldesc']}
+                        <p>{$v['label']}</p>
+                    </div>
+                </div>
+            </a>
+
+            {/foreach}
+        </div>
+    </div>
+</div>
+<!-- 限时购结束 -->
+<!-- 专题精选开始 -->
+<div class="zt">
+    <h2 class="ppai-top shoufa-top ztzt">{$cname2}&nbsp;
+        <i class="iconfont icon-gengduo"></i></h2>
+    {foreach $re2 as $v}
+    <div class="zt2">
+        <div class="zt2-1">
+            <div class="zt-dw">
+                <div class="dw1">
+                    <a href="">
+                        <img src="{$v['lthumb']}" alt="">
+                        <p>
+                            {$v['price']}
+                            <span>{$v['ldesc']}</span>
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {/foreach}
+</div>
+<!-- 专题精选结束 -->
+<!-- 猜你喜欢开始 -->
+<div class="cai">
+    <h2 class="ppai-top shoufa-top ztzt">{foreach array_slice($res,12,1) as $v}{$v['cname']}{/foreach}</h2>
+    <nav class="nav">
+        {foreach $re3 as $v}
+        <a href="/index.php/details?pid={$v['cid']}">
+            <div class="navbox">
+                <div class="navboximg">
+                    <img src="{$v['lthumb']}" alt="">
+                </div>
+                <div class="imgbottom">
+                    {$v['price']}
+                </div>
+                <div class="navboxbottom">
+                    {$v['ldesc']}
+                    <p>{$v['label']}</p>
+                </div>
+            </div>
+        </a>
+        {/foreach}
+    </nav>
+</div>
+
+<!-- 猜你喜欢结束 -->
+{include file='view/footer.html'}
+

@@ -1,0 +1,39 @@
+{include file='view/headers.html'}
+{include file='view/left.html'}
+<script src="{JS_PATH}classshow.js"></script>
+<style>
+    input{
+        border:none;
+        outline:none;
+        background:none;
+    }
+
+</style>
+<div class="right">
+    <table class="table table-striped">
+        <thead>
+            <th>id</th>
+            <th>标签</th>
+            <th>描述</th>
+            <th>缩略图</th>
+            <th>父级id</th>
+            <th>价格</th>
+            <th>操作</th>
+        </thead>
+        <tbody>
+        {foreach $tos as $v}
+        <tr data-id="{$v['cid']} ">
+            <td class="id">{$v['cid']}</td>
+            <td><input type="text" value="{$v['price']}" data-type="price" ></td>
+            <td><input type="text" value="{$v['ldesc']}" data-type="ldesc" ></td>
+            <td><img src="{$v['lthumb']}" alt="" class="img-thumbnail" style="width: 60px;height: 60px;"></td>
+            <td><input type="text" value="{$v['pid']}" data-type="pid"></td>
+            <td><input type="text" value="{$v['label']}" data-type="label"></td>
+            <td><button class="btn btn-default" type="submit">删除</button></td>
+        </tr>
+        {/foreach}
+        </tbody>
+    </table>
+    {include file='view/footers.html'}
+</body>
+</html>

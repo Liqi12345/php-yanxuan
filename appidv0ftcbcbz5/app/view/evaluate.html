@@ -1,0 +1,52 @@
+{include file='view/header.html'}
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_471082_2ilbcpko8z392j4i.css">
+<link rel="stylesheet" href="{CSS_PATH}evaluate.css">
+<script src="{JS_PATH}evaluate.js"></script>
+
+<!-- 头部 -->
+<header>
+    <a href="javascript:history.back()">
+
+        <img src="{IMG_PATH}xq_03.png" class="head-left" alt="">
+    </a>
+    <span>商品评价</span>
+    <a href="">
+        <div class="head-Rig">
+            <!--<i class="iconfont iconfont4 icon-sousuo"></i>-->
+        </div>
+    </a>
+</header>
+{foreach $data as $v}
+<section>
+    <div class="radius">
+        <a href="">
+             <img src="{$v['ehead']}" alt="">
+        </a>
+    </div>
+        <span class="span">{$v['etitle']}</span><br>
+    <p>
+        {$v['edesc']}
+    </p>
+    {assign var=foo value=explode(',',$v['eimg'])}
+    {for $i=0 to count($foo)-1}
+    <img src="{$foo[$i]}" alt="" class="img" style="display: none;">
+    {/for}
+    <div class="box">
+        <span style="font-size: 0.28rem;font-weight: 600">掌柜回复:</span>&nbsp;&nbsp;
+        <span style="font-size: 0.3rem">{$v['eboss']}</span>
+
+    </div>
+
+   <div class="time">
+       <span>{$v['edata']}</span>月
+       <span>09</span>日
+      &nbsp; <span>{$v['etag']}</span>
+   </div>
+
+</section>
+{/foreach}
+
+<div class="last">木有了...</div>
+<div class="return">
+    <img src="{IMG_PATH}top.png" alt="">
+</div>

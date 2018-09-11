@@ -1,0 +1,50 @@
+{include file='view/headers.html'}
+{include file='view/left.html'}
+<script src="{JS_PATH}infoshow.js"></script>
+<style>
+    input{
+        border:none;
+        outline:none;
+        background:none;
+
+    }
+
+
+</style>
+<div class="right">
+    <table class="table table-striped">
+        <theard>
+            <th>id</th>
+            <th>商品标题</th>
+            <th>商品描述</th>
+            <th>商品现价</th>
+            <th>商品原价</th>
+            <th>商品标签</th>
+            <th>父级栏目</th>
+            <th>商品评价</th>
+            <th>商品详情</th>
+            <th>操作</th>
+        </theard>
+        <tbody>
+        {foreach $tos as $v}
+        <tr data-id="{$v['cid']}">
+            <td class="id">{$v['cid']}</td>
+            <td><input style="width:100px" type="text" value="{$v['cname']}" data-type="cname" ></td>
+            <td><input style="width:100px" type="text" value="{$v['idesc']}" data-type="idesc" ></td>
+            <td><input style="width:100px" type="text" value="{$v['iprice']}" data-type="iprice" ></td>
+            <td><input style="width:100px" type="text" value="{$v['ioprice']}" data-type="ioprice" ></td>
+            <td><input style="width:100px" type="text" value="{$v['itab']}" data-type="itab" ></td>
+            <td><input style="width:100px" type="text" value="{$v['pid']}" data-type="pid"></td>
+            <td><textarea style="width:100px" class="form-control" rows="3"
+                          data-type="ievaluate" >{$v['ievaluate']}</textarea></td>
+            <td><textarea style="width:100px" class="form-control" rows="3"
+                          data-type="idetails">{$v['idetails']}</textarea></td>
+            <td><button class="btn btn-default" type="submit">删除</button></td>
+
+        </tr>
+        {/foreach}
+        </tbody>
+    </table>
+    {include file='view/footers.html'}
+</body>
+</html>

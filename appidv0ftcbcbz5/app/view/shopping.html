@@ -1,0 +1,59 @@
+{include file='view/header.html'}
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_471082_2ilbcpko8z392j4i.css">
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_563692_zvo9z7bwoymsra4i.css">
+<link rel="stylesheet" href="{CSS_PATH}shopping.css">
+<script src="{JS_PATH}shopping.js"></script>
+<header class="top">
+    <a href="javascript:history.back()">
+
+        <img src="{IMG_PATH}xq_03.png" class="head-left" alt="">
+    </a>
+    <span>购物车</span>
+    <a href="##">
+        <div class="head-Rig">
+            <span>编辑</span>
+        </div>
+    </a>
+</header>
+
+<!-- 购物物品 -->
+<div class="wuPing">
+    {foreach $data as $v}
+    <div class="wpxiaobox" data-lid="{$v['cid']}">
+
+ 
+        <!-- 图片盒子 -->
+        <div class="wpxiaobox1">
+            <i class="iconfont icon-xuanzhong e" style="float: left;"></i>
+            <a href="/index.php/details?pid={$v['cid']}">
+                <img src="{$v['lthumb']}" alt="">
+            </a>
+        </div>
+        <!-- 右侧盒子 -->
+        <div class="wpright">
+            <a href="##" class="a22">{$v['price']}</span>
+            </a>
+            <a href=""><p>{$v['ldesc']}</p></a>
+            <div class="jaige">{$v['label']}</div>
+            <div class="wpshulL" data-lid="{$v['cid']}">
+                <a href="#" class="wpshulL1">-</a>
+                <div class="wpshulL2">{$v['num']}</div>
+                <a href="#" class="wpshulL3">+</a>
+            </div>
+        </div>
+        <div class="num"  style="font-size:0.26rem;">×{$v['num']}</div>
+
+    </div>
+    {/foreach}
+
+</div>
+
+<div class="foots">
+    <i class="iconfont icon-xuanzhong e" style="color: #b52829;"></i>
+    <span class="not e">请选择</span>
+    <a href="#" class="jiesuan">下单</a>
+    <span>合计<strong class="total">0</strong></span>
+    <span>共<strong class="totalnum">0</strong>件</span>
+
+</div>
+{include file='view/footer.html'}

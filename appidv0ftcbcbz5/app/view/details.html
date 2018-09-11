@@ -1,0 +1,86 @@
+{include file='view/header.html'}
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_471082_2ilbcpko8z392j4i.css">
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_563692_wxpldy0newmi.css">
+<link rel="stylesheet" href="{CSS_PATH}details.css">
+<link rel="stylesheet" href="{CSS_PATH}swiper.min.css">
+<script src="{JS_PATH}swiper.min.js"></script>
+<script src="{JS_PATH}details.js"></script>
+<div class="header">
+    <a href="javascript:history.back()" class="left">
+        <img src="{IMG_PATH}xq_03.png" alt="">
+    </a>
+    <div class="headMid">
+        <a href="" class="mid1">商品</a>
+        <a href="#mao" class="mid1">详情</a>
+    </div>
+    <a href="/index.php/index" class="left4">
+        <img src="{IMG_PATH}xq_05.png" alt="">
+    </a>
+    <a href="" class="left3">
+        <i class="iconfont icon-gouwuche"></i>
+        <div class="radius"></div>
+    </a>
+</div>
+
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        {foreach $arr as $v}
+        <a href="" class="banna swiper-slide">
+            <img src="{$v}" alt="">
+                <div class="swiper-pagination" style="text-align: right; width:1rem;left:80%"></div>
+        </a>
+        {/foreach}
+
+
+    </div>
+</div>
+
+{foreach $data as $v}
+    <div class="xq2">
+        <p>{$v['cname']}</p>
+        <p>{$v['idesc']}</p>
+        <p>{$v['iprice']}<del>{$v['ioprice']}</del></p>
+        <a href="">{$v['itab']}</a>
+    </div>
+    <div class="xq2-2" >
+
+        <p>{$v['ievaluate']}<br>用户评价</p>
+        <a href="/index.php/evaluate?cid={$v['cid']}">查看 ></a>
+    </div>
+    {$v['idetails']}
+{/foreach}
+
+<!-- 猜你喜欢开始 -->
+<div class="cai">
+    <h2 class="ppai-top shoufa-top ztzt">大家都在看</h2>
+    <nav class="nav">
+    {foreach $result as $v}
+    <a href="/index.php/details?pid={$v['cid']}">
+        <div class="navbox">
+            <div class="navboximg">
+                <img src="{$v['lthumb']}" alt="">
+            </div>
+            <div class="imgbottom">
+                {$v['price']}
+            </div>
+            <div class="navboxbottom">
+                {$v['ldesc']}
+                <p>{$v['label']}</p>
+            </div>
+        </div>
+    </a>
+    {/foreach}
+    </nav>
+</div>
+<!-- 猜你喜欢结束 -->
+<div class="foot">
+    <a href="#">
+        <i class="iconfont icon-kefu"></i>
+    </a>
+    <a href="/index.php/shopping">立即购买</a>
+    <a href="javascript: ;" class="hot">加入购物车</a>
+</div>
+<div class="dw">加入成功</div>
+<!--footer-->
+

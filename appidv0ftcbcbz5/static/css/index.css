@@ -1,0 +1,520 @@
+@import url('base.css');
+.shouye{
+	width: auto;
+	height: 0.88rem;
+	background-color:#fffbff;
+	padding: 0 0.2rem;
+	display: flex;
+	padding-top: 0.05rem;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	z-index: 100;
+
+}
+.shao{
+	display: block;
+	width:0.7rem;
+	height: 0.27rem;
+	background-image: url('/static/images/saoyisao.png');
+	background-repeat: no-repeat;
+	background-position: 0.08rem 0;
+	background-size: 0.52rem 0.53rem;
+	padding-top: 0.53rem;
+	font-size: 0.16rem;
+	text-align: center;
+	color: #b8b7b8;
+}
+.input1{
+	width: 4.15rem;
+	height: 0.65rem;
+	background: #efefef;
+	border-radius: 5px;
+	font-size: 0.26rem;
+	background-image: url('/static/images/Screenshot_2017-10-10-23-11-18-728_com.netease_03.png');
+	background-repeat:no-repeat;
+	background-position:0.6rem 0.1rem;
+	background-size:0.42rem 0.42rem;
+	padding-left: 1.1rem;
+	outline:none;
+}
+.xiaoxi{
+	display: block;
+	width: 0.7rem;
+	height: 0.27rem;
+	background-image: url('/static/images/xiaoxi.png');
+	background-repeat: no-repeat;
+	background-size: 0.48rem 0.53rem;
+	background-position: 0.08rem 0;
+	padding-top: 0.53rem;
+	font-size: 0.16rem;
+	text-align: center;
+	color: #b8b7b8;
+}
+/* 推荐nav开始 */
+.tj-nav{
+	width: auto;
+
+	padding: 0 0.2rem;
+	background: #fffbff;
+	position: fixed;
+	top: 0.88rem;
+	left: 0;
+	z-index: 100;
+	right: 0;
+	margin: 0 auto;
+	border-bottom: 0.2rem solid #f4f4f4;
+
+}
+.tj-nav:first-of-type{
+	border-bottom: none;
+}
+.tj-nav ul{
+	/*display: flex;*/
+	/*justify-content: space-around;*/
+
+}
+.tj-nav ul li{
+	padding-top: 0.25rem;
+	line-height: 0.6rem;
+	text-align: center;
+
+}
+.tj-nav ul li a{
+	font-size: 0.3rem;
+	color: #0d0d0d;
+}
+.tj-nav ul li a:hover{
+	color:#aa0a0b;
+}
+.tj-nav ul li:hover{
+	border-bottom: 2px solid #aa0a0b;
+}
+.tj-nav .xiahua{
+	display: block;
+	width: 0.95rem;
+	height: 0.85rem;
+	float: right;
+	opacity: 0.5;
+	background: url('../img/liqi_03.png');
+	background-size: 0.95rem 0.7rem;
+	background-position: 0 0.2rem;
+	position: absolute;
+	top: 0;
+	right: 0.1rem;
+}
+/* 推荐nav结束 */
+/* banna开始 */
+.banna{
+	width: 100%;
+	height: 4.2rem;
+	position: relative;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	margin-top: 1.9rem;
+}
+.banna a{
+	display: block;
+	width: 7.5rem;
+	height: 4.2rem;
+	float: left;
+}
+.img-box{
+	height: 100%;
+	float: left;
+	position: absolute;
+
+}
+.banna a img{
+	width: 100%;
+	height: 100%;
+}
+.banna .dian{
+	width:2rem;
+	height: 0.2rem;
+	position:absolute;
+	bottom: 0.15rem;
+	right: 0.3rem;
+}
+.banna .dian li:first-child{
+	border: 2px solid red;
+}
+.banna .dian li{
+	width:0.08rem;
+	height: 0.08rem;
+	background: transparent;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	float: left;
+	margin:0.06rem;
+}
+/* banna结束 */
+/* 网易自营开始 */
+.wy{
+	width: auto;
+	height: 3rem;
+	padding: 0 0.2rem;
+	margin-bottom: 0.2rem;
+	background: #fff;
+}
+.wy .wy1{
+	width:auto;
+	height: 1rem;
+	padding: 0 0.1rem;
+	font-size: 0.24rem;
+	background: #fff;
+	line-height: 1rem;
+
+}
+.wy1 a{
+	display: block;
+	width: 33%;
+	float: left;
+	height:0.57rem;
+	padding-top: 0.17rem;
+	font-size:0.22rem;
+}
+.wy1 a img{
+	width:0.39rem;
+	height:0.39rem;
+	float: left;
+	margin-right: 0.1rem;
+	padding-top: 0.2rem;
+}
+.wy2{
+	margin-top:0.1rem;
+	width: 100%;
+	height: 1.9rem;
+	background:#fff;
+
+}
+.sf .swiper-wrapper a{
+	display: block;
+
+}
+.wy2-1{
+	width: 100%;
+	height: 2rem;
+	display: flex;
+	justify-content: space-between;
+}
+.wy2-1 a{
+	display: block;
+	width:1.06rem;
+	height:1.06rem;
+	font-size: 0.21rem;
+	line-height: 0.64rem;
+	text-align: center;
+
+}
+.wy2 a img{
+	width:100%;
+	height:100%;
+}
+/* 网易自营结束 */
+/* 品牌开始 */
+.ppai{
+	width: 100%;
+	overflow: hidden;
+
+	background: #fff;
+	margin-bottom: 0.4rem;
+}
+.ppai-top{
+	width: 100%;
+	height: 1.15rem;
+	text-align: center;
+	line-height: 1.15rem;
+	font-size: 0.34rem;
+	font-weight:600;
+	background: #fff;
+	margin-bottom:0.2rem;
+}
+.ff2{
+	border:3px solid #fff!important;
+	border-left:none!important;
+	border-top:none!important;
+	padding-bottom: 0.2rem;
+}
+
+.fl1:first-of-type{
+	border:none;
+}
+/* 品牌结束*/
+/* 首发开始 */
+.sf{
+	width: 100%;
+	background:#fff;
+}
+.sf a{
+    display: block;
+    width: 3.75rem;
+    margin-bottom:0.3rem;
+    border-right: 0.2rem solid transparent;
+    border-right: 0.2rem solid transparent;
+}
+.sf-b-list img{
+	width: 100%;
+	height: 2.7rem;
+}
+.navboxbottom{
+	font-size:0.28rem!important;
+}
+.navbox .imgbottom1{
+	font-size: 0.28rem;
+	height: 0.8rem;
+	line-height: 0.8rem;
+}
+.navbox .box2{
+	background:#f4f4f4;
+	margin-bottom: 0.2rem;
+}
+.shou-zi{
+	width: auto;
+	height: 0.3rem;
+	padding: 0 0.22rem;
+	text-align: center;
+	line-height: 0.3rem;
+	color: #fff;
+	margin-bottom: 0.2rem;
+}
+.shou-zi1{
+	width: 0.74rem;
+	height: 100%;
+	float: left;
+	background:#dea24a;
+}
+.shou-zi2{
+	width: 0.94rem;
+	height: 100%;
+	float:right;
+	background:#e7797b;
+}
+.shou-zi3{
+	width: auto;
+	height:1rem;
+	padding: 0 0.22rem;
+	text-align: center;
+	line-height: 0.3rem;
+	font-size: 0.276rem;
+}
+.s2{
+	padding-top: 0.55rem;
+}
+
+.shou-zi4{
+	font-size: 0.25rem;
+	color: #b21a1c;
+	padding-left: 0.35rem;
+}
+
+/* 饭量开始 */
+.fl{
+	margin-bottom: 0.2rem;
+	width: 100%;
+	background:#fff;
+	overflow: hidden;
+}
+.fl1{
+	display: block;
+	height: 100%;
+	float: left;
+	overflow: hidden;
+	box-sizing: border-box;
+	border-bottom: .2rem solid #f3f3f3;
+}
+.ff1{
+	display: block;
+	width: 50%;
+	height:2.4rem;
+	float: left;
+	box-sizing: border-box;
+	border-bottom: 1px solid #eeeeec;
+	border-right: 1px solid #eeeeec;
+}
+.ff1 .span{
+	padding-top:0.4rem;
+	color:#B4292F;
+	font-size: 0.3rem;
+	float: left;
+	width:1rem;
+}
+.ff1 img{
+	width: 1.67rem;
+	height: 1.5rem;
+	float: right;
+}
+.f-zi{
+	width: 2rem;
+	float: left;
+	padding: 0.3rem 0 0.2rem 0.28rem;
+
+	font-size: 0.3rem;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	box-sizing: border-box;
+	white-space:nowrap;
+}
+.ff1 span{
+	width: 3rem;
+	font-size: 0.27rem;
+	color: #6c6f6c;
+	padding-left: 0.28rem;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	float: left;
+	white-space: nowrap;
+
+}
+.ff1:last-of-type{
+	border:none;
+}
+.ff1:nth-last-child(2){
+	border-bottom:none;
+}
+/* 饭量结束 */
+/* 专题精选开始 */
+.zt{
+	width:100%;
+	height:5.85rem;
+	background: #fff;
+	overflow: hidden;
+}
+.zt2{
+	width:100%;
+	height: 4.7rem;
+	padding-left: 0.28rem;
+	margin: 0 auto;
+
+}
+.zt2-1{
+	height: 4.7rem;
+	width: 5.7rem;
+	position: relative;
+	top: 0;
+	left: 0;
+	margin: 0 auto;
+}
+.zt-dw{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width:100%;
+	height: 4.7rem;
+	overflow: hidden;
+}
+ .dw1{
+	width: 5.7rem;
+	height: 4.7rem;
+	background:#fff;
+	margin-right:0.3rem;
+	float: left;
+}
+.dw1 p{
+	margin-top: 0.3rem;
+	width: 3.5rem;
+	height: 1rem;
+	font-size: 0.3rem;
+	line-height: 0.48rem;
+}
+.dw1 p span{
+	font-size: 0.22rem;
+	color: #b3b2b3;
+}
+.zt2-1 a{
+	display: block;
+	width: 100%;
+	height: 3.3rem;
+}
+
+.zt2-1 a img{
+	width: 100%;
+	height: 100%;
+}
+.ztzt{
+	border: 0;
+}
+/* 专题精选结束 */
+/* 猜你喜欢开始 */
+.cai{
+	height: 7rem;
+	width: 100%;
+	background:#fff;
+	margin-bottom:1rem;
+}
+.nav{
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0 0.3rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	background: white;
+	margin-bottom:1.05rem;
+}
+.nav a{
+	display: block;
+	width: 48.5%;
+	background: #f4f4f4;
+	margin-bottom: 0.2rem;
+}
+.navbox{
+	width: 100%;
+	height: 100%;
+	color: #000;
+	box-sizing: border-box;
+
+}
+.navboximg{
+	width: 100%;
+	height: 3rem;
+}
+.navboximg img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.imgbottom{
+	width: 100%;
+	height: 1.03rem;
+	background: #F1ECE2;
+	color: #9F8A60;
+	box-sizing: border-box;
+	font-size: 0.3rem;
+	padding: 0 0.15rem ;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+	line-height: 1.03rem;
+}
+.navboxbottom{
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0.2rem 0.1rem 0;
+	font-size: 0.3rem;
+	background: white;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+}
+
+.navboxbottom p{
+	margin-top: 0.1rem;
+	color: #B4292F;
+	font-size: 0.3rem;
+
+}
+.bj{
+	height: auto;
+	width: auto;
+	background: white;
+}
+/* 猜你喜欢结束 */

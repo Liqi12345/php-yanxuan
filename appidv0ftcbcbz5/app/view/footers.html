@@ -1,0 +1,32 @@
+<div class="yema-box">
+    <div class="yema">
+
+        <div class="li">
+            <a href="{$method}?page={$reduce}">
+                <span class="click">&lt;&lt;</span>
+            </a>
+        </div>
+
+        {for $i=0 to 7}
+        <div class="li">
+            <a href="{$method}?page={$i}">
+                <span class="click ">{$i+1}</span>
+            </a>
+        </div>
+        {/for}
+        <div class="li">
+            <a href="{$method}?page={$i}">
+                <span class="click ">...</span>
+            </a>
+        </div>
+
+        <div class="li">
+            <a href="{$method}?page={$add}">
+                <span class="click">&gt;&gt;</span>
+            </a>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

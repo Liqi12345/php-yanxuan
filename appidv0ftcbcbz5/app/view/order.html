@@ -1,0 +1,53 @@
+{include file='view/header.html'}
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_471082_2ilbcpko8z392j4i.css">
+<link rel="stylesheet" href="{CSS_PATH}order.css">
+<script src="{JS_PATH}order.js"></script>
+<!-- 头部 -->
+<header>
+    <a href="javascript:history.back()">
+
+        <img src="{IMG_PATH}xq_03.png" class="head-left" alt="">
+    </a>
+    <span>我的订单</span>
+    <a href="">
+        <div class="head-Rig">
+            <i class="iconfont iconfont4 icon-sousuo"></i>
+        </div>
+    </a>
+</header>
+<!-- 列表 -->
+<aside>
+    <a href="">
+        <div class="aside1">	全部 </div>
+    </a>
+    <a href="#" class="aside1">待付款</a>
+    <a href="#" class="aside1">待发货 </a>
+    <a href="#" class="aside1">已发货 </a>
+    <a href="#" class="aside1">待评价 </a>
+</aside>
+
+
+{for $i=0 to count($arrs)-1}
+
+<div class="con">
+    <div class="con1">
+        <span>订单编号:24270615</span>
+        <a href="" class="a" data-id="{$aid[$i]}">取消订单</a>
+    </div>
+
+    <a href="" class="con2">
+
+        <img src="{$arrs[$i]['lthumb']}" alt="">
+
+        <p>
+            <span class="span2">{$arrs[$i]['ldesc']}</span>
+            <span class="span1">×{$num[$i]}</span>
+
+        </p>
+    </a>
+    <div class="con3">
+        <span>应付:¥{{$arrs[$i]['label']|mb_substr:1:5:'utf-8'}*$num[$i]}元</span>
+        <a href="">付款 <span class="span"></span>:<span class="span"></span></a>
+    </div>
+</div>
+{/for}

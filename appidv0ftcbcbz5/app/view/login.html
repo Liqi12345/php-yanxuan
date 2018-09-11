@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{CSS_PATH}login.css">
+    <link rel="stylesheet" href="{CSS_PATH}bootstrap.css">
+    <script src="{JS_PATH}jquerys.js"></script>
+
+
+</head>
+<body>
+<div class="box">
+<form>
+        <div class="form-group">
+            <label for="exampleInputEmail1">用户名</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="username" name="username">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">密码</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+        </div>
+        <div class="form-group">
+            <img src="/index.php/login/code" alt="" onclick="this.src='/index.php/login/code?a='+Math.random()" style="float: left;">
+            <input type="text" class="form-control"  placeholder="请输入验证码" name="yzm" style="float: right;margin-top:0;width: calc(100% - 115px)">
+        </div>
+
+
+
+
+</form>
+        <input class="btn btn-default" type="submit" value="提交">
+
+</div>
+</body>
+</html>
+<script src="{JS_PATH}login.js"></script>
+
+

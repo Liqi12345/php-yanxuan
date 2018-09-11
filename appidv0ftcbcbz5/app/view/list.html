@@ -1,0 +1,71 @@
+{include file='view/header.html'}
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_471082_2ilbcpko8z392j4i.css">
+<link rel="stylesheet" href="{CSS_PATH}list.css">
+<link rel="stylesheet" href="{CSS_PATH}swiper.min.css">
+<script src="{JS_PATH}swiper.min.js"></script>
+<script>
+    $(function() {
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView:3.5,
+        });
+    })
+</script>
+<!-- 头部 -->
+<header>
+    <a href="javascript:history.back()">
+
+        <img src="{IMG_PATH}xq_03.png" class="head-left" alt="">
+    </a>
+    <span>推荐区</span>
+    <a href="">
+        <div class="head-Rig">
+            <i class="iconfont iconfont4 icon-sousuo"></i>
+        </div>
+    </a>
+</header>
+<!--<div class="tongji">-->
+
+    <!--{foreach $result as $v}-->
+    <!--<a href="/index.php/lists?cid={$v['cid']}">{$v['cname']}</a>-->
+    <!--{/foreach}-->
+<!--</div>-->
+
+
+<div class="pirwz swiper-container" style="margin: 1.5rem 0 0.3rem 0;">
+    <div class="swiper-wrapper " style="padding:0 0 0.2rem 0.25rem">
+        {foreach $result as $v}
+
+        <a href="/index.php/lists?cid={$v['cid']} " class="swiper-slide">
+            <div class="pirwzbox">
+                <div class="boximg1">
+                    <img src="{$v['cthumb']}" alt="">
+                </div>
+                <div class="boxwz1">{$v['cname']}</div>
+            </div>
+        </a>
+        {/foreach}
+    </div>
+</div>
+<div class="br"></div>
+<!-- 列表 -->
+
+<!-- 内容 -->
+<nav class="nav">
+    {foreach $data as $v}
+    <a href="/index.php/details?pid={$v['cid']}">
+        <div class="navbox">
+            <div class="navboximg">
+                <img src="{$v['lthumb']}" alt="">
+            </div>
+            <div class="imgbottom">
+                {$v['price']}
+            </div>
+            <div class="navboxbottom">
+                {$v['ldesc']}
+                <p>{$v['label']}</p>
+            </div>
+        </div>
+    </a>
+    {/foreach}
+</nav>
+{include file='view/footer.html'}

@@ -1,0 +1,55 @@
+{include file='view/header.html'}
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_471082_h507nwt4rp0kke29.css">
+<link rel="stylesheet" href="{CSS_PATH}person.css">
+
+<div class="top">
+    <div class="touxiang">
+        <a href="/index.php/user/land">
+            <img src="{$data['photo']}" alt="">
+        </a>
+    </div>
+    <a href="">
+
+        <div class="yonghuming">{$data['name']}
+        </div>
+    </a>
+    <a href="">
+        <div class="erweima">
+            <i class="iconfont icon-erweima"></i>
+        </div>
+    </a>
+</div>
+<!-- 我的订单开始 -->
+
+    <div class="dd">
+        <a href="/index.php/order">{$result1}</a>
+        <a href="" class="iconfont icon-dayuhao"></a>
+    </div>
+    <div class="dfk">
+        {foreach $re1 as $v}
+        <a href="/index.php/order">
+            <img src="{$v['cthumb']}" alt="">
+            <span style="font-size: 0.24rem">{$v['cname']}</span>
+
+        </a>
+       {/foreach}
+    </div>
+<!-- 换行 -->
+<div class="huanhang1"></div>
+<div class="dd">
+    <a href="">{$result2}</a>
+</div>
+
+<div class="dd2">
+    {foreach $re2 as $v}
+    <a href="">
+        <img src="{$v['cthumb']}" alt="">{$v['cname']}
+    </a>
+    {/foreach}
+</div>
+
+<div class="huanhang1 huanhang2"></div>
+
+<!-- 猜你喜欢结束 -->
+{include file='view/footer.html'}
+

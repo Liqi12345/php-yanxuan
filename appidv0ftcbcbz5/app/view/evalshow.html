@@ -1,0 +1,55 @@
+{include file='view/headers.html'}
+{include file='view/left.html'}
+<script src="{JS_PATH}evalshow.js"></script>
+<style>
+    input{
+        border:none;
+        outline:none;
+        background:none;
+        width: 100px !important;
+    }
+
+</style>
+    <div class="right">
+        <table class="table table-striped">
+            <theard>
+                <th>id</th>
+                <th>评价者</th>
+                <th>头像</th>
+                <th>评价描述</th>
+                <th>掌柜回复</th>
+                <th>评价图片</th>
+                <th>评价时间</th>
+                <th>商品标签</th>
+                <th>父级栏目</th>
+                <th>操作</th>
+            </theard>
+            <tbody>
+               {foreach $tos as $v}
+                   <tr data-id="{$v['cid']}">
+                   <td class="id">{$v['cid']}</td>
+                   <td><input type="text" value="{$v['etitle']}" data-type="etitle" ></td>
+                   <td><img src="{$v['ehead']}" alt="" class="img-thumbnail" style="width: 60px;height: 60px;"></td>
+                   <td><textarea style="width:100px" class="form-control" rows="3"
+                                 data-type="edesc" >{$v['edesc']}</textarea></td>
+                   <td><textarea style="width:100px" class="form-control" rows="3"
+                                 data-type="eboss" >{$v['eboss']}</textarea></td>
+
+                     {assign var=foo value=explode(',',{$v['eimg']})}
+                       <td>
+                     {foreach $foo as $c}
+                   <img src="{$c}" alt="" class="img-thumbnail" style="width: 60px;height: 60px;">
+                     {/foreach}
+                       </td>
+
+                   <td><input type="text" value="{$v['edata']}" data-type="edata" ></td>
+                   <td><input type="text" value="{$v['etag']}" data-type="etag" ></td>
+                   <td><input type="text" value="{$v['pid']}" data-type="pid"></td>
+                   <td><button class="btn btn-default" type="submit">删除</button></td>
+               </tr>
+               {/foreach}
+            </tbody>
+        </table>
+    {include file='view/footers.html'}
+</body>
+</html>
